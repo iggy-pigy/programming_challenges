@@ -5,7 +5,7 @@ function skiJump(mountain) {
     }
     var speed = height * 1.5;
     var jumpLenght = (height * speed * 9) / 10;
-    var roundedJumpLenght = Math.round(jumpLenght * 100) / 100;
+    var roundedJumpLenght = jumpLenght.toFixed(2);
     if (roundedJumpLenght < 10) {
         return `${roundedJumpLenght} metres: He's crap!`
     } else if (roundedJumpLenght >= 10 && roundedJumpLenght < 25) {
