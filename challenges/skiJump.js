@@ -1,19 +1,13 @@
 function skiJump(mountain) {
-    var height = 0;
-    for (i = 0; i < mountain.length; i++) {
-        height += 1;
-    }
-    var speed = height * 1.5;
-    var jumpLenght = (height * speed * 9) / 10;
-    var roundedJumpLenght = jumpLenght.toFixed(2);
-    if (roundedJumpLenght < 10) {
-        return `${roundedJumpLenght} metres: He's crap!`
-    } else if (roundedJumpLenght >= 10 && roundedJumpLenght < 25) {
-        return `${roundedJumpLenght} metres: He's ok!`
-    } else if (roundedJumpLenght >= 25 && roundedJumpLenght < 50) {
-        return `${roundedJumpLenght} metres: He's flying!`
+    const jumpLenght = ((mountain.length * (mountain.length * 1.5) * 9) / 10).toFixed(2)
+    if (jumpLenght < 10) {
+        return `${jumpLenght} metres: He's crap!`
+    } else if (jumpLenght >= 10 && jumpLenght < 25) {
+        return `${jumpLenght} metres: He's ok!`
+    } else if (jumpLenght >= 25 && jumpLenght < 50) {
+        return `${jumpLenght} metres: He's flying!`
     } else {
-        return `${roundedJumpLenght} metres: Gold!!`
+        return `${jumpLenght} metres: Gold!!`
     };
 }
 
