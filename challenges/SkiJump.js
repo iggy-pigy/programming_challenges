@@ -7,6 +7,5 @@ function skiJump(mountain) {
     var jumpLenght = (height * speed * 9) / 10;
     var roundedJumpLenght = jumpLenght.toFixed(2);
 }
-skiJump(['*', '**', '***', '****', '*****', '******']);
 
 module.exports=skiJump;
