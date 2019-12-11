@@ -1,6 +1,6 @@
 const skiJump = require("../challenges/skiJump");
 
-describe.only("skiJump", () => {
+describe("skiJump", () => {
   test("returns the lenght of the resulting jump", () => {
     const actual = skiJump(['*', '**', '***', '****', '*****', '******', '*******', '********']);
     expect(actual).toBe('86.40 metres: Gold!!');
