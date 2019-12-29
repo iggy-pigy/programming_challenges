@@ -6,12 +6,12 @@ function tickets(peopleInLine) {
     for (let i of peopleInLine) {
 
         if (i === 100) {
-            if (amount25 >= 3) {
-                amount25 -= 3;
-                amount100++;
-            } else if (amount25 >= 1 && amount50 >= 1) {
+            if (amount25 >= 1 && amount50 >= 1) {
                 amount25 -= 1;
                 amount50 -= 1;
+                amount100++;
+            } else if (amount25 >= 3) {
+                amount25 -= 3;
                 amount100++;
             } else {
                 return "NO";
